@@ -1,0 +1,57 @@
+.login-page-container{
+    width: 100%;
+    font-size: 18px;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 8px;
+    border: none;
+}
+.login-page-container-light{
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); 
+    color:black;
+}
+
+.login-page-container-dark{
+    background-color: #181818;
+    color:white;
+}
+.login-page-container-dark input{
+    color: rgb(216, 208, 208);
+}
+.input-question{
+    font-size: 0.7em;  
+    text-transform:uppercase;  
+    
+}
+.input-question-light{
+    color: rgb(153, 145, 145);
+    
+}
+.input-login{
+    padding: 5px 10px 5px 10px;
+    border: 1px solid rgb(177, 174, 174);
+    border-radius: 3px;
+    font-size: 0.9em;
+    outline: none;
+    color : rgba(42, 39, 39, 0.9);
+    background:transparent;
+}
+.login-img{
+    height: auto;
+    width: 50%;
+    margin : 15px 0 15px 0;
+}
+.check-box-text{
+    font-size: 0.75em;
+}
+.login-button{
+    color:white ;
+    background-color: rgb(0, 140, 255);
+    font-weight: 500;
+    font-size: 0.8em;
+    margin : 10px 0 0px 0;
+}
+.error-msg{
+    color: #ff0b37;
+    font-size: 0.55em;
+}

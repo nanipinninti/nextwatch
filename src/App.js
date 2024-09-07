@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter,Route,Routes,Navigate } from 'react-router-dom';
+import AppTheme from './context/theme';
+import LoginPage from './components/LoginPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppTheme.Consumer>
+      {value =>{
+        const {activeTheme} = value
+        console.log(value)
+        return(
+          <div className={`body-${activeTheme}`}>
+            <BrowserRouter>
+              <div className='container'>
+                <div className='row d-flex flex-column align-items-center'>
+                  <Routes>
+                      <Route path='*' element = {<LoginPage />} />
+                  </Routes>
+
+                </div>
+              </div>
+            </BrowserRouter>
+          </div>
+          )
+      }}
+      </AppTheme.Consumer>
   );
 }
 
