@@ -3,6 +3,11 @@
   width: 100%;
   min-height: 100vh;
 }
+.body-dark{
+  background-color: white;
+  width: 100%;
+  min-height: 100vh;
+}
 
 /* common */
 /* button */
