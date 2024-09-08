@@ -3,12 +3,15 @@
   width: 100%;
   min-height: 100vh;
 }
-.body-dark{
+.body-light{
   background-color: white;
   width: 100%;
   min-height: 100vh;
 }
 
+*{
+  box-sizing: border-box;
+}
 /* common */
 /* button */
 .button{

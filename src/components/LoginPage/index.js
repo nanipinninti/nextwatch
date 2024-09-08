@@ -16,7 +16,7 @@ const LoginPage = ()=>{
     
     const navigate = useNavigate()
 
-    if (Cookies.get("login_token")!==null) {
+    if (Cookies.get("login_token")!==undefined) {
         return (<Navigate to={'/'}/>)
     }
 

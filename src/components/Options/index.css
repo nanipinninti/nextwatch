@@ -1,0 +1,47 @@
+.sub-option-container{
+    width: 100%;
+    display: flex;
+    gap : 20px;
+    align-items: end;
+    padding : 5px 0 9px 15px;
+}
+.current-option-dark{
+    background: #313131;
+}
+.current-option-light{
+    background: #f4f4f4;
+}
+.options-container{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 83vh;
+}
+.options-container-light{
+    color: black;
+}
+.sub-option-text{
+    font-size: 1em;
+}
+.options-container-dark{
+    color: white;
+}
+.current-option h1{
+    font-weight: bolder;
+}
+
+
+.options-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap : 10px;
+}
+@media screen and (max-width : 576px) {
+
+}
+@media screen and (min-width : 576px ) {
+    
+}
+@media screen and (min-width : 768px ) {
+    
+}
