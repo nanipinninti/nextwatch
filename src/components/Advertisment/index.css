@@ -1,3 +1,28 @@
+.Ad-container{
+    background: url("https://assets.ccbp.in/frontend/react-js/nxt-watch-banner-bg.png");
+    color : black;
+    background-repeat: none;
+    background-size: cover;
+}
+.ad-left{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.banner-img{
+    height: auto;
+    width: 180px;
+}
+.banner-text{
+    font-size: 1em;
+}
+.ad-button{
+    width: 50%;
+    border-radius: 0px;
+    padding: 10px 0 10px 0;
+    border: 1px solid black;
+}
 @media screen and (max-width : 576px) {
     
 }

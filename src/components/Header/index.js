@@ -29,7 +29,7 @@ const Header = (props)=>{
         {value=>{
             const {activeTheme,onChangeTheme} = value
             return(
-                <div className="col-12 header-component">
+                <div className="col-12 header-component ">
                     <div onClick={toHome}>
                         <img src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
                                         className="web-img" />

@@ -87,8 +87,8 @@ const Options = (props)=>{
                 value =>{
                     const {activeTheme} = value
                     return(
-                        <div className= {`col-12 col-md-3 d-${DisplyOrNotInMobile} d-md-flex options-container options-container-${activeTheme}`}>
-                            <div className="options">
+                        <div className= {`col-12 col-md-3 px-0 d-${DisplyOrNotInMobile} d-md-flex options-container options-container-${activeTheme}`}>
+                            <div className="options w-100">
                                 {
                                     OptionDetails.map(option=>(
                                         <SubOptionComponent

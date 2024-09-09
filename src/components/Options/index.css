@@ -37,7 +37,9 @@
     gap : 10px;
 }
 @media screen and (max-width : 576px) {
-
+    .options-footer{
+        padding-left: 10px;
+    }
 }
 @media screen and (min-width : 576px ) {
     

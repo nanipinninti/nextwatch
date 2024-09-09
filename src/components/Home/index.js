@@ -9,19 +9,16 @@ import './index.css'
 
 const Home = (props)=>{
     const [showOptions ,setShowOptions] = useState(false)
-    const [showAd ,setShowAd] = useState(true)
     const OptionSettingsInMobile = ()=>{
         setShowOptions(!showOptions)
     }
-    const AdSettings = ()=>{
-        setShowAd(!showAd)
-    }
+
     return(
         <div className="col-12">
             <div className="row">
                 <Header OptionSettingsInMobile = {OptionSettingsInMobile}/>
                 <Options showOptions = {showOptions} />
-                <Advertisment showAd ={showAd} AdSettings = {AdSettings} />
+                <Advertisment/>
             </div>
         </div>
     )
