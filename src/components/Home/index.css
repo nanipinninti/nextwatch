@@ -1,0 +1,17 @@
+.home-right{
+    height: 95vh;
+    overflow: scroll;
+
+}
+.home-right{
+    overflow: scroll; /* Enables scrolling */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
+}
+
+@media screen and (min-width : 578px) {
+    .videos-component{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}

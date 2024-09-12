@@ -1,0 +1,21 @@
+.failed-img{
+    height: auto;
+    width: 60%;
+}
+.failure-retry-button{
+    width: 120px;
+    background-color: #00306e;
+    color: white;
+    height: 35px;
+}
+@media screen and (max-width : 576px) {
+    
+}
+@media screen and (min-width : 576px ) {
+    .failed-img{
+        width: 30%;
+    }
+}
+@media screen and (min-width : 768px ) {
+    
+}

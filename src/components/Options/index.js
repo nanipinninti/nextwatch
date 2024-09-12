@@ -4,33 +4,33 @@ import AppTheme from "../../context/theme";
 import { IoMdHome } from "react-icons/io";
 import { MdWhatshot } from "react-icons/md";
 import { SiYoutubegaming } from "react-icons/si";
-import { MdOutlinePlaylistAdd } from "react-icons/md";
 import { FaFacebook } from "react-icons/fa";
 import { PiXLogoFill } from "react-icons/pi";
 import { FaLinkedin } from "react-icons/fa";
-
+import { useNavigate } from "react-router-dom";
+import { MdOutlinePlaylistAdd } from "react-icons/md";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './index.css'
 
 const OptionDetails = [
     {
-        id : "Home",
+        id : "/",
         name : "Home",
         IconComponent : IoMdHome
     },
     {
-        id : "Trending",
+        id : "/trending",
         name : "Trending",
         IconComponent : MdWhatshot
     },
     {
-        id : "Gaming",
+        id : "/gaming",
         name : "Gaming",
         IconComponent : SiYoutubegaming
     },
     {
-        id : "SavedVideos",
+        id : "/saved-videos",
         name : "Saved videos",
         IconComponent : MdOutlinePlaylistAdd
     }
@@ -38,7 +38,7 @@ const OptionDetails = [
 const SubOptionComponent = (props)=>{
     const {Details,currentOption,activeTheme,changeOption} = props
     const {id,name,IconComponent} = Details
-    const IsItCurrent = (id===currentOption) ? `current-option current-option-${activeTheme}` : ""
+    const IsItCurrent = (name===currentOption) ? `current-option current-option-${activeTheme}` : ""
     return(
         <div className = {`sub-option-container  ${IsItCurrent}`} onClick={()=>{changeOption(id)}}> 
             <div style={(IsItCurrent!=="")?{color : "red"}:{}}>
@@ -67,19 +67,19 @@ const OptionsFooterComponent = (props)=>{
                     <FaLinkedin  style={{height : "auto",width : "25px" , color :"#0077B5"}}/>
                 </div>
             </div>
-            <h1 style={{'font-size':"0.9em" ,"margin-top": "10px","max-width":"85%"}}>
+            <h1 style={{fontSize : "0.9em","margin-top": "10px","max-width":"85%"}}>
                 Enjoy! Now to see your channels and reccomendations!
             </h1>
         </div>
     )
 }
 const Options = (props)=>{
-    const {showOptions} = props
-    const [currentOption,setCurrentOption] = useState('Home')
-
+    const {current , showOptions} = props
+    const [currentOption,setCurrentOption] = useState(current)
+    const navigate = useNavigate()
     const DisplyOrNotInMobile = (showOptions)?"flex": "none"
     const changeOption = (id)=>{
-        setCurrentOption(id)
+        navigate(id)
     }
     return(
         <AppTheme.Consumer>
@@ -101,7 +101,7 @@ const Options = (props)=>{
                                     ))
                                 }
                             </div>
-                            <div className="options-footer">
+                            <div className="options-footer d-none d-md-block">
                                 <OptionsFooterComponent 
                                     AppTheme = {activeTheme}
                                 />

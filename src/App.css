@@ -1,11 +1,14 @@
+.body{
+  overflow: hidden;
+}
 .body-dark{
-  background-color: #0f0f0f;
+  background-color: #181818;
   width: 100%;
   min-height: 100vh;
   color: white;
 }
 .body-light{
-  background-color: white;
+  background-color: #f9f9f9;
   width: 100%;
   min-height: 100vh;
   color: black;

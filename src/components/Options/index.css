@@ -6,7 +6,7 @@
     padding : 5px 0 9px 15px;
 }
 .current-option-dark{
-    background: #313131;
+    background: #424242;
 }
 .current-option-light{
     background: #f4f4f4;
@@ -14,7 +14,7 @@
 .options-container{
     flex-direction: column;
     justify-content: space-between;
-    height: 83vh;
+    height: 95vh;
 }
 .options-container-light{
     color: black;
@@ -40,10 +40,17 @@
     .options-footer{
         padding-left: 10px;
     }
+    .options-container{
+        height: auto;
+    }
 }
 @media screen and (min-width : 576px ) {
-    
+    .options-container{
+        height: 98vh;
+    }
 }
 @media screen and (min-width : 768px ) {
-    
+    .options-container{
+        height: 95vh;
+    }
 }

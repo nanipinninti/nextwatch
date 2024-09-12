@@ -1,0 +1,53 @@
+.video-player{
+    width: 100%;
+    height: auto;
+}
+.playing-video-component{
+    padding-top: 15px;
+}
+.playing-video-component-light{
+    background-color: #f4f4f4;
+}
+.playing-video-component-dark{
+    background-color: #0f0f0f;
+}
+
+.playing-video-title{
+    margin-top: 10px;
+    font-size: 1em;
+}
+.playing-video-views{
+    font-size: 0.8em;
+}
+
+.playing-component-body{
+    min-height: 40vh;
+    padding: 15px;
+}
+
+.playing-video-profile{
+    height: auto;
+    width: 40px;
+}
+.playing-video-channel-name{
+    font-size: 0.9em;
+}
+.playing-video-channel-subscribers{
+    font-size: 0.8em;
+}
+.playing-video-description{
+    font-size: 0.85em;
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+@media screen and (max-width : 576px) {
+    
+}
+@media screen and (min-width : 576px ) {
+    .playing-video-component{
+        padding: 25px;
+    }
+}
+@media screen and (min-width : 768px ) {
+    
+}

@@ -9,7 +9,7 @@ import './index.css'
 const Advertisment = (props)=>{
     const [hide,setHide] = useState("block")
     return(
-        <div className={`col-12 col-md-9 p-0 d-${hide}`}>
+        <div className={`col-12 p-0 d-${hide}`}>
             <div className="Ad-container d-flex justify-content-between px-4 py-4 w-100">
                 <div className="ad-left">
                     <img className="banner-img" src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png" />

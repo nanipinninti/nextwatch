@@ -1,0 +1,39 @@
+.video-thumbnail{
+    height: auto;
+    width: 100%;
+}
+.channel-img{
+    width: 30px;
+    height: auto;
+}
+.video-title{
+    font-size: 0.95em;
+}
+.channel-name{
+    font-size: 0.8em;
+}
+.view-count{
+    font-size: 0.8em;
+}
+.publish{
+    font-size: 0.8em;
+}
+.dot-icon{
+    height: 10px;
+}
+.footer-video-light{
+    
+    color : #475569;
+}
+.footer-video-dark{
+    color: #414e61;
+}
+@media screen and (max-width : 576px) {
+    
+}
+@media screen and (min-width : 576px ) {
+    
+}
+@media screen and (min-width : 768px ) {
+    
+}
