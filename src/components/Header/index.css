@@ -48,3 +48,93 @@
     color: #3b82f6;
     border: 1px solid #3b82f6;
 }
+.logout-popup{
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.logout-popup-dark{
+    background-color: #424242;
+    color:white;
+}
+.logout-popup-light{
+    color : #423ca3;
+    background-color: white;
+}
+.logout-popup button{    
+    background: transparent;
+}
+.logout-popup-light button{
+    border: 1px solid #aaa5a5;
+    color : #aaa5a5;
+}
+.logout-popup-dark button{
+    border: 1px solid #616e7c;
+    color : #616e7c;
+    font-weight: 600;
+}
+.trigger-button{
+    border-radius:5px ;
+    padding : 5px 10px 5px 10px;
+    outline: none;
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+  z-index: 10; /* Ensure it sits behind the popup but above other elements */
+}
+
+.logout-popup {
+  z-index: 20; /* Make sure the popup is above the overlay */
+}
+.popup-wrapper {
+    position: relative;
+    z-index: 20;
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    z-index: 10; /* Ensure it's behind the popup */
+  }
+  
+  .logout-popup {
+    position: relative;
+    z-index: 30; /* Make sure the popup is above the overlay */
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+
+  /* Option container */
+  .popup-option-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .popup-close{
+    position: absolute;
+    right : 20px;
+    top:15px;
+  }
+
+.popup-option-container-light{
+    background-color: white;
+}
+.popup-option-container-dark{
+    background-color: #212121;
+    color: white;
+}

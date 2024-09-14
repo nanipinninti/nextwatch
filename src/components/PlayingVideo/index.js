@@ -85,8 +85,9 @@ const PlayingVideo = (props)=>{
                 const {activeTheme , addToSavedVideos ,removeFromSavedVideos , savedVideos ,likedVideos,
                     addToLikedVideos ,removeFromLikedVideos,dislikedVideos,addToDislikedVidoes,removeFromDislikedVideos} = value
                 const {title ,id,videoUrl,thumbnailUrl,channel,viewCount,publishedAt,description} = videoDetails 
+                // console.log(savedVideos)
                 const success= ()=>(
-                    <div className="col-12 col-md-9 p-0 d-flex flex-column">
+                    <div className="col-12 col-lg-9 p-0 d-flex flex-column">
                             <div className = {`playing-video-component playing-video-component-${activeTheme}`}>                        
                                 <ReactPlayer url={videoUrl}
                                     width="100%"
@@ -106,9 +107,9 @@ const PlayingVideo = (props)=>{
                                             {/* For like */}
                                             <div>
                                             {
-                                                (likedVideos.includes(id))?
+                                                (likedVideos.includes(videoDetails))?
                                                     (
-                                                        <div style={{color : "#2563eb"}} onClick={()=>{removeFromLikedVideos(id)}} className="d-flex gap-2">
+                                                        <div style={{color : "#2563eb"}} onClick={()=>{removeFromLikedVideos(videoDetails)}} className="d-flex gap-2">
                                                             <BiSolidLike />
                                                             <h1 className="m-0" style={{fontSize : "0.9em"}}>Like</h1>
                                                         </div>
@@ -116,7 +117,7 @@ const PlayingVideo = (props)=>{
 
                                                     :
                                                     (
-                                                        <div style={{color : "#64748b"}} onClick={()=>{addToLikedVideos(id)}} className="d-flex gap-2">
+                                                        <div style={{color : "#64748b"}} onClick={()=>{addToLikedVideos(videoDetails)}} className="d-flex gap-2">
                                                             <BiLike />
                                                             <h1 className="m-0" style={{fontSize : "0.9em"}}>Like</h1>
                                                         </div>
@@ -128,9 +129,9 @@ const PlayingVideo = (props)=>{
                                             {/* for dislike */}
                                             <div>
                                             {
-                                                (dislikedVideos.includes(id))?
+                                                (dislikedVideos.includes(videoDetails))?
                                                     (
-                                                        <div style={{color : "#2563eb"}} onClick={()=>{removeFromDislikedVideos(id)}} className="d-flex gap-2">
+                                                        <div style={{color : "#2563eb"}} onClick={()=>{removeFromDislikedVideos(videoDetails)}} className="d-flex gap-2">
                                                             <BiSolidDislike />
                                                             <h1 className="m-0" style={{fontSize : "0.9em"}}>Dislike</h1>
                                                         </div>
@@ -138,7 +139,7 @@ const PlayingVideo = (props)=>{
 
                                                     :
                                                     (
-                                                        <div  style={{color : "#64748b"}} onClick={()=>{addToDislikedVidoes(id)}} className="d-flex gap-2">
+                                                        <div  style={{color : "#64748b"}} onClick={()=>{addToDislikedVidoes(videoDetails)}} className="d-flex gap-2">
                                                             <BiDislike />
                                                             <h1 className="m-0" style={{fontSize : "0.9em"}}>Dislike</h1>
                                                         </div>
@@ -151,9 +152,9 @@ const PlayingVideo = (props)=>{
                                             {/* for saved vidoes */}
                                             <div>
                                             {
-                                                (savedVideos.includes(id))?
+                                                (savedVideos.includes(videoDetails))?
                                                     (
-                                                        <div  style={{color : "#2563eb"}} onClick={()=>{removeFromSavedVideos(id)}} className="d-flex gap-2">
+                                                        <div  style={{color : "#2563eb"}} onClick={()=>{removeFromSavedVideos(videoDetails)}} className="d-flex gap-2">
                                                             <MdOutlinePlaylistAddCheck />
                                                             <h1 className="m-0" style={{fontSize : "0.9em"}}>Saved</h1>
                                                         </div>
@@ -161,7 +162,7 @@ const PlayingVideo = (props)=>{
 
                                                     :
                                                     (
-                                                        <div style={{color : "#64748b"}} onClick={()=>{addToSavedVideos(id)}} className="d-flex gap-2">
+                                                        <div style={{color : "#64748b"}} onClick={()=>{addToSavedVideos(videoDetails)}} className="d-flex gap-2">
                                                             <MdOutlinePlaylistAdd />
                                                             <h1 className="m-0" style={{fontSize : "0.9em"}}>Save</h1>
                                                         </div>
@@ -185,7 +186,7 @@ const PlayingVideo = (props)=>{
                                             {/* channel name and subscribers */}
                                             <div className="d-flex flex-column">
                                                 <h1 className="playing-video-channel-name">{channel.name}</h1>
-                                                <h1 className="playing-video-channel-subscribers" style={(activeTheme==="light")?{color :  '#94a3b8'}: {color : '#64748b'}}>
+                                                <h1 className="playing-video-channel-subscribers" style={(activeTheme==="light")?{color :  '#8eacc0'}: {color : '#64748b'}}>
                                                 {channel.subscriberCount} subscribers</h1>
                                             </div>
                                         </div>

@@ -37,6 +37,9 @@
     gap : 10px;
 }
 @media screen and (max-width : 576px) {
+    .sub-option-container{
+        padding-left: 33%;
+    }
     .options-footer{
         padding-left: 10px;
     }
@@ -45,9 +48,6 @@
     }
 }
 @media screen and (min-width : 576px ) {
-    .options-container{
-        height: 98vh;
-    }
 }
 @media screen and (min-width : 768px ) {
     .options-container{

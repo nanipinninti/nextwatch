@@ -1,6 +1,5 @@
-.video-thumbnail{
-    object-fit: cover;
-    aspect-ratio: 16/9;
+.gaming-video-thumbnail{
+    height: auto;
     width: 100%;
 }
 .channel-img{

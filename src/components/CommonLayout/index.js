@@ -8,14 +8,10 @@ import './index.css'
 
 const CommonLayout = (props)=>{
     const {current} = props
-    const [showOptions, setShowOptions] = useState(false)
-    const OptionSettingsInMobile = ()=>{
-        setShowOptions(!showOptions)
-    }
     return(
         <>
-            <Header OptionSettingsInMobile = {OptionSettingsInMobile}/>
-            <Options current = {current} showOptions = {showOptions}/>
+            <Header current = {current}/>
+            <Options current = {current} />
         </>
     )
 }

@@ -35,12 +35,12 @@ const OptionDetails = [
         IconComponent : MdOutlinePlaylistAdd
     }
 ]
-const SubOptionComponent = (props)=>{
+export const SubOptionComponent = (props)=>{
     const {Details,currentOption,activeTheme,changeOption} = props
     const {id,name,IconComponent} = Details
     const IsItCurrent = (name===currentOption) ? `current-option current-option-${activeTheme}` : ""
     return(
-        <div className = {`sub-option-container  ${IsItCurrent}`} onClick={()=>{changeOption(id)}}> 
+        <div className = {`sub-option-container   ${IsItCurrent}`} onClick={()=>{changeOption(id)}}> 
             <div style={(IsItCurrent!=="")?{color : "red"}:{}}>
                 <IconComponent  />
             </div>
@@ -74,10 +74,9 @@ const OptionsFooterComponent = (props)=>{
     )
 }
 const Options = (props)=>{
-    const {current , showOptions} = props
+    const {current } = props
     const [currentOption,setCurrentOption] = useState(current)
     const navigate = useNavigate()
-    const DisplyOrNotInMobile = (showOptions)?"flex": "none"
     const changeOption = (id)=>{
         navigate(id)
     }
@@ -87,7 +86,7 @@ const Options = (props)=>{
                 value =>{
                     const {activeTheme} = value
                     return(
-                        <div className= {`col-12 col-md-3 px-0 d-${DisplyOrNotInMobile} d-md-flex options-container options-container-${activeTheme}`}>
+                        <div className= {`col-12 col-lg-3 px-0 d-none d-lg-flex options-container options-container-${activeTheme}`}>
                             <div className="options w-100">
                                 {
                                     OptionDetails.map(option=>(
@@ -101,7 +100,7 @@ const Options = (props)=>{
                                     ))
                                 }
                             </div>
-                            <div className="options-footer d-none d-md-block">
+                            <div className="options-footer d-none d-lg-block">
                                 <OptionsFooterComponent 
                                     AppTheme = {activeTheme}
                                 />

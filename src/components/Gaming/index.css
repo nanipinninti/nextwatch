@@ -1,3 +1,7 @@
+.playing-video-component{
+    overflow-y: scroll;
+    max-height: 95vh;
+}
 @media screen and (max-width : 576px) {
     
 }
