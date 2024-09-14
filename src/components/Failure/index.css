@@ -8,8 +8,20 @@
     color: white;
     height: 35px;
 }
+
+.failure-container{
+    height: 90vh;
+    overflow: scroll;
+}
+.failure-container{
+    overflow: scroll; /* Enables scrolling */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
+}
 @media screen and (max-width : 576px) {
-    
+    .failure-container{
+        height: 92vh;
+    }
 }
 @media screen and (min-width : 576px ) {
     .failed-img{

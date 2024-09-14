@@ -8,8 +8,13 @@
     color: white;
     height: 35px;
 }
+.no-saved-videos{
+    height: 90vh;
+}
 @media screen and (max-width : 576px) {
-    
+    .no-saved-videos{
+        height: 92vh;
+    }
 }
 @media screen and (min-width : 576px ) {
     .failed-img{

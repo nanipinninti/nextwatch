@@ -64,7 +64,7 @@ const Gaming = (props)=>{
                     </div>
                     <h1 style={{fontSize : "1.5em"}}>Gaming</h1>
                 </div>
-                <div className="row p-md-4">
+                <div className="row p-4">
                     {
                         videoDetails.map(video=>(
                             <GamingVideo key={video.id} videoDetails = {video} />
@@ -90,12 +90,13 @@ const Gaming = (props)=>{
         <AppTheme.Consumer>{
             value =>{
                 const {activeTheme} = value
+                const background = (activeTheme==="light") ? "#f9f9f9" : "#0f0f0f"
                 return(
                 <div className="col-12">
                     <div className="row">
                         <CommonLayout current = "Gaming" />
                         <div className="col-12 col-lg-9 p-0 d-flex flex-column">
-                            <div className = {`playing-video-component playing-video-component-${activeTheme}`}>                        
+                            <div className = {`gaming-component gaming-component-${activeTheme}`} style={{background : background}}>                        
                                 {
                                     currentComponent(activeTheme)
                                 }

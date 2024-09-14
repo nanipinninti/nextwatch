@@ -3,14 +3,14 @@
     background: transparent;
     border-radius: 5px;
     border-top-right-radius: 0px ;
-    border : 1px solid gray;
+    border : 1px solid #aeaeae;
     border-bottom-right-radius: 0px ;
     outline: none;
     padding: 5px;
     padding-left: 10px;
 }
 .search-bar-light{
-    color : #323232
+    color : #7e7e7e
 }
 .search-bar-dark{
     color : #cccccc
@@ -21,7 +21,7 @@
     align-items: center;
     width: 35px;
     padding: 5px;
-    border: 1px solid gray;
+    border: 1px solid #aeaeae;
     border-left: none;
     border-top-right-radius: 5px ;
     border-bottom-right-radius: 5px ;

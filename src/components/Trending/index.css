@@ -1,24 +1,41 @@
 .trending-component{
     overflow-y: scroll;
-    height: 95vh;
-    overflow-y: scroll;
+    height: 90vh;
+}
+.trending-component{
+    overflow: scroll; /* Enables scrolling */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
 }
 .trending-header{
     display: flex; 
     gap : 15px;
-    padding: 20px;
+    padding: 18px;
+    padding-left: 25px;
+    align-items: center;
 }
 .trending-header-light{
     background-color: #f1f1f1;
-    color: #1d293b;
+    color: #1c293a;
+}
+.trending-header-dark{
+    background-color: #181818;
+    color: white;
 }
 .trending-header-light div{
     background-color: #e1e9f0;
     border-radius: 50%;
     padding: 5px;
 } 
+.trending-header-dark div{
+    background-color: #0f0f0f;
+    border-radius: 50%;
+    padding: 10px;
+} 
 @media screen and (max-width : 576px) {
-    
+    .trending-component{
+        height: 92vh;
+    }
 }
 @media screen and (min-width : 576px ) {
     

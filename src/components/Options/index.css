@@ -6,15 +6,15 @@
     padding : 5px 0 9px 15px;
 }
 .current-option-dark{
-    background: #424242;
+    background: #383838;
 }
 .current-option-light{
-    background: #f4f4f4;
+    background: #f1f5f9;
 }
 .options-container{
     flex-direction: column;
     justify-content: space-between;
-    height: 95vh;
+    height: 90vh;
 }
 .options-container-light{
     color: black;
@@ -37,9 +37,6 @@
     gap : 10px;
 }
 @media screen and (max-width : 576px) {
-    .sub-option-container{
-        padding-left: 33%;
-    }
     .options-footer{
         padding-left: 10px;
     }
@@ -47,10 +44,11 @@
         height: auto;
     }
 }
-@media screen and (min-width : 576px ) {
+@media screen and (max-width : 992px ) {
+    .sub-option-container{
+        padding-left: 33%;
+    }
+
 }
 @media screen and (min-width : 768px ) {
-    .options-container{
-        height: 95vh;
-    }
 }

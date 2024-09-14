@@ -1,7 +1,6 @@
 .home-right{
-    height: 95vh;
+    height: 90vh;
     overflow: scroll;
-
 }
 .home-right{
     overflow: scroll; /* Enables scrolling */
@@ -9,6 +8,11 @@
     scrollbar-width: none; /* For Firefox */
 }
 
+@media screen and (max-width : 578px) {
+    .home-right{
+        height: 92vh;
+    }
+}
 @media screen and (min-width : 578px) {
     .videos-component{
         padding-left: 25px;

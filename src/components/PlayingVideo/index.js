@@ -24,10 +24,11 @@ const constNames = {
     Success : "Success"
 }
 
-function formatDistanceToNowWithoutOver(date) {
+function formatDistanceToNowWithoutWords(date) {
     const formattedDate = formatDistanceToNow(date, { addSuffix: true });
-    return formattedDate.replace('over ', '');
+    return formattedDate.replace(/\b(over|almost|about)\b/g, '');
   }
+  
 const PlayingVideo = (props)=>{
     const {id} = useParams()
     const [status,setStatus] = useState(constNames.Loading)
@@ -86,6 +87,10 @@ const PlayingVideo = (props)=>{
                     addToLikedVideos ,removeFromLikedVideos,dislikedVideos,addToDislikedVidoes,removeFromDislikedVideos} = value
                 const {title ,id,videoUrl,thumbnailUrl,channel,viewCount,publishedAt,description} = videoDetails 
                 // console.log(savedVideos)
+                const check = (arrayOfObjects) => {
+                    return arrayOfObjects.some(obj => obj.id === id);
+                };
+                
                 const success= ()=>(
                     <div className="col-12 col-lg-9 p-0 d-flex flex-column">
                             <div className = {`playing-video-component playing-video-component-${activeTheme}`}>                        
@@ -96,10 +101,10 @@ const PlayingVideo = (props)=>{
                                     <h1 className="playing-video-title">{title}</h1>
                                     <div className="w-100 d-flex flex-column flex-md-row justify-content-between align-items-md-center my-4 gap-3">
 
-                                        <div className="d-flex align-items-center gap-1">
+                                        <div className="d-flex align-items-center gap-1" style={(activeTheme==="light")?{color :  '#727e8c'}: {color : '#616a70'}}>
                                             <h1 className="playing-video-views m-0">{viewCount} Views</h1>
                                             <GoDotFill className="dot-icon" style={{height : "8px",marginTop :"3px"}}/>
-                                            <h1 className="playing-video-views m-0">{formatDistanceToNowWithoutOver(publishedAt)}</h1>
+                                            <h1 className="playing-video-views m-0">{formatDistanceToNowWithoutWords(publishedAt)}</h1>
                                         </div>
 
                                         <div className="d-flex gap-2 align-items-center">
@@ -107,7 +112,7 @@ const PlayingVideo = (props)=>{
                                             {/* For like */}
                                             <div>
                                             {
-                                                (likedVideos.includes(videoDetails))?
+                                                (check(likedVideos))?
                                                     (
                                                         <div style={{color : "#2563eb"}} onClick={()=>{removeFromLikedVideos(videoDetails)}} className="d-flex gap-2">
                                                             <BiSolidLike />
@@ -129,7 +134,7 @@ const PlayingVideo = (props)=>{
                                             {/* for dislike */}
                                             <div>
                                             {
-                                                (dislikedVideos.includes(videoDetails))?
+                                                (check(dislikedVideos))?
                                                     (
                                                         <div style={{color : "#2563eb"}} onClick={()=>{removeFromDislikedVideos(videoDetails)}} className="d-flex gap-2">
                                                             <BiSolidDislike />
@@ -152,7 +157,7 @@ const PlayingVideo = (props)=>{
                                             {/* for saved vidoes */}
                                             <div>
                                             {
-                                                (savedVideos.includes(videoDetails))?
+                                                (check(savedVideos))?
                                                     (
                                                         <div  style={{color : "#2563eb"}} onClick={()=>{removeFromSavedVideos(videoDetails)}} className="d-flex gap-2">
                                                             <MdOutlinePlaylistAddCheck />
@@ -186,7 +191,7 @@ const PlayingVideo = (props)=>{
                                             {/* channel name and subscribers */}
                                             <div className="d-flex flex-column">
                                                 <h1 className="playing-video-channel-name">{channel.name}</h1>
-                                                <h1 className="playing-video-channel-subscribers" style={(activeTheme==="light")?{color :  '#8eacc0'}: {color : '#64748b'}}>
+                                                <h1 className="playing-video-channel-subscribers" style={(activeTheme==="light")?{color :  '#727e8c'}: {color : '#616a70'}}>
                                                 {channel.subscriberCount} subscribers</h1>
                                             </div>
                                         </div>

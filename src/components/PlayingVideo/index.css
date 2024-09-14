@@ -4,12 +4,22 @@
 }
 .playing-video-component{
     padding-top: 15px;
+    height: 90vh;
+}
+.playing-video-component{
+    height: 90vh;
+    overflow: scroll;
+}
+.playing-video-component{
+    overflow: scroll; /* Enables scrolling */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
 }
 .playing-video-component-light{
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
 }
 .playing-video-component-dark{
-    background-color: #0f0f0f;
+    background-color: #181818;
 }
 
 .playing-video-title{
@@ -41,7 +51,9 @@
     padding-bottom: 15px;
 }
 @media screen and (max-width : 576px) {
-    
+    .playing-video-component{
+        height: 92vh;
+    }
 }
 @media screen and (min-width : 576px ) {
     .playing-video-component{

@@ -1,7 +1,6 @@
 .trending-video-thumbnail{
     object-fit: cover;
     aspect-ratio: 16/9;
-    max-width: 330px;
     width: 100%;
 }
 .trending-bottom-right{
@@ -17,21 +16,16 @@
 .trending-channel-name{
     font-size: 0.8em;
 }
-.view-count{
-    font-size: 0.8em;
-}
-.publish{
-    font-size: 0.8em;
-}
+
 .trending-dot-icon{
     height: 10px;
 }
 .footer-video-light{
     
-    color : #475569;
+    color : #727e8c;
 }
 .footer-video-dark{
-    color: #414e61;
+    color: #616a70;
 }
 @media screen and (max-width : 576px) {
     .trending-bottom-right{
@@ -39,7 +33,9 @@
     }
 }
 @media screen and (min-width : 576px ) {
-    
+    .trending-video-thumbnail{
+        max-width: 330px;
+    }
     .trending-video-container{
         min-width: 70%;
     }

@@ -13,7 +13,7 @@ const GamingVideo = (props)=>{
     const {id,title,thumbnailUrl,viewCount} = videoDetails
     const navigate = useNavigate()
     return(
-        <div className="col-6 col-md-4" onClick={()=>{navigate(`/video/${id}`)}}>
+        <div className="col-6 col-sm-4" onClick={()=>{navigate(`/video/${id}`)}}>
             <div className="video-container w-100 pb-4">
                 <img src={thumbnailUrl} className="gaming-video-thumbnail" alt="video-thumbnail"/>
 

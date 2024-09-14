@@ -44,12 +44,13 @@ const SavedVideos = (props)=>{
         <AppTheme.Consumer>{
             value =>{
                 const {activeTheme,savedVideos} = value
+                const background = (activeTheme==="light") ? "#f9f9f9" : "#181818"
                 return(
                 <div className="col-12">
                     <div className="row">
                         <CommonLayout current="Saved videos" />
                         <div className="col-12 col-lg-9 p-0 d-flex flex-column">
-                            <div className = {`playing-video-component playing-video-component-${activeTheme}`}>                        
+                            <div className = {`saved-video-component saved-video-component-${activeTheme}`} style={{background : background}}>                        
                             {
                                     currentComponent(activeTheme ,savedVideos)
                             }

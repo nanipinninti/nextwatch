@@ -21,12 +21,13 @@
 .dot-icon{
     height: 10px;
 }
+
 .footer-video-light{
     
-    color : #475569;
+    color : #727e8c;
 }
 .footer-video-dark{
-    color: #414e61;
+    color: #616a70;
 }
 @media screen and (max-width : 576px) {
     

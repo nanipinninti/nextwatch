@@ -1,8 +1,11 @@
 .header-component{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 25px;
     padding-bottom: 20px;
+    height: 10vh;
+    position: sticky;
 }
 .web-img{
     height: auto;
@@ -13,8 +16,13 @@
     }
     
 }
+@media screen and (max-width : 576px ) {
+    .header-component{
+        height: 8vh;
+    }
+}
 @media screen and (min-width : 576px ) {
-
+    
     .web-img{
         width: 150px;
     }
@@ -45,8 +53,8 @@
     border: 1px solid white;
 }
 .logout-button-light{
-    color: #3b82f6;
-    border: 1px solid #3b82f6;
+    color: #4088f3;
+    border: 1px solid #4088f3;
 }
 .logout-popup{
     padding: 20px;

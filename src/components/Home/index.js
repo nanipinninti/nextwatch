@@ -110,7 +110,7 @@ const Home = (props)=>{
                             {
                                 value =>{
                                     const {activeTheme} = value
-                                    const background = (activeTheme==="light") ? "#f4f4f4" : "#0f0f0f"
+                                    const background = (activeTheme==="light") ? "#f9f9f9" : "#181818"
                                     return(
                                         <div className="col-12 col-lg-9 p-0 d-flex flex-column  home-right" style={{background : background}} >
                                             <Advertisment/>

@@ -119,7 +119,7 @@ const Header = (props)=>{
                 modal
                 trigger={
                     <div className="profile  d-lg-none">
-                            <MdDehaze className={`theme-icon theme-icon-${activeTheme}`} />
+                            <MdDehaze className={`theme-icon theme-icon-${activeTheme}`} />                            
                     </div>
                 }
                
@@ -153,10 +153,12 @@ const Header = (props)=>{
     <AppTheme.Consumer>
         {value=>{
             const {activeTheme,onChangeTheme} = value
+            const imgSrc =(activeTheme==="light")?"https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+                                            : "https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png"
             return(
                 <div className="col-12 header-component ">
                     <div onClick={toHome}>
-                        <img src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+                        <img src={imgSrc}
                                         className="web-img" />
                     </div>
                     <div className="d-flex gap-3">
@@ -170,7 +172,8 @@ const Header = (props)=>{
 
                         {/* Profile */}
                         <div className="profile d-none d-lg-block">
-                            <CgProfile className={`theme-icon theme-icon-${activeTheme}`} />
+                            {/* <CgProfile className={`theme-icon theme-icon-${activeTheme}`} /> */}
+                            <img src="https://assets.ccbp.in/frontend/react-js/nxt-watch-profile-img.png " className="theme-icon"/>
                         </div>
 
                         {/* Options */}

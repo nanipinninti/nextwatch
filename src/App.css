@@ -2,13 +2,13 @@
   overflow: hidden;
 }
 .body-dark{
-  background-color: #181818;
+  background-color: #212121;
   width: 100%;
   min-height: 100vh;
   color: white;
 }
 .body-light{
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   width: 100%;
   min-height: 100vh;
   color: black;

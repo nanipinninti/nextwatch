@@ -5,6 +5,7 @@
     gap: 20px;
     border-radius: 8px;
     border: none;
+    padding-bottom: 20px;
 }
 .login-page-container-light{
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); 
@@ -12,7 +13,7 @@
 }
 
 .login-page-container-dark{
-    background-color: #181818;
+    background-color: #0f0f0f;
     color:white;
 }
 .login-page-container-dark input{
@@ -28,10 +29,10 @@
     
 }
 .input-login{
-    padding: 5px 10px 5px 10px;
+    padding: 8px 13px 8px 13px;
     border: 1px solid rgb(177, 174, 174);
     border-radius: 3px;
-    font-size: 0.9em;
+    font-size: 0.95em;
     outline: none;
     color : rgba(42, 39, 39, 0.9);
     background:transparent;
@@ -46,10 +47,11 @@
 }
 .login-button{
     color:white ;
-    background-color: rgb(0, 140, 255);
+    background-color: #2082f2;
     font-weight: 500;
     font-size: 0.8em;
-    margin : 10px 0 0px 0;
+    height: 35px;
+    margin : 5px 0 0px 0;
 }
 .error-msg{
     color: #ff0b37;

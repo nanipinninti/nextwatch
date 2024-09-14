@@ -1,9 +1,16 @@
-.playing-video-component{
+.gaming-component{
     overflow-y: scroll;
-    max-height: 95vh;
+    height: 90vh;
+}
+.gaming-component{
+    overflow: scroll; /* Enables scrolling */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
 }
 @media screen and (max-width : 576px) {
-    
+    .gaming-component{
+        height: 92vh;
+    }
 }
 @media screen and (min-width : 576px ) {
     

@@ -1,57 +1,33 @@
-.not-found-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.not-found-img{
-    width: 95%;
+.failed-img{
     height: auto;
+    width: 60%;
 }
-.not-found-head{
-    color:  #cbd5e1;
-    font-size: 1rem;
-    margin-top: 15px;
-}
-.not-found-p{
-    font-size: 0.9rem;
-    width: 80%;
-    color: #7e858e;
-    text-align: center;
-}
-/* Extra Small Devices (Portrait Phones, Less than 576px) */
-@media (max-width: 575.98px) {
-    .not-found-container{
-        height: 90vh;
-    }
+.failure-retry-button{
+    width: 120px;
+    background-color: #00306e;
+    color: white;
+    height: 35px;
 }
 
-/* Small Devices (Landscape Phones, 576px and up) */
-@media (min-width: 576px) {
-    .not-found-img{
+.failure-container{
+    height: 90vh;
+    overflow: scroll;
+}
+.failure-container{
+    overflow: scroll; /* Enables scrolling */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
+}
+@media screen and (max-width : 576px) {
+    .failure-container{
+        height: 92vh;
+    }
+}
+@media screen and (min-width : 576px ) {
+    .failed-img{
         width: 30%;
-        height: auto;
-    }
-    .not-found-head{
-        font-size: 1.5rem;
-        margin-top: 20px;
-    }
-    .not-found-p{
-        font-size: 1.2rem;
     }
 }
-
-/* Medium Devices (Tablets, 768px and up) */
-@media (min-width: 768px) {
-
-}
-
-/* Large Devices (Desktops, 992px and up) */
-@media (min-width: 992px) {
-
-}
-
-/* Extra Large Devices (Large Desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
+@media screen and (min-width : 768px ) {
+    
 }

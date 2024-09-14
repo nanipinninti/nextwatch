@@ -1,5 +1,16 @@
+.saved-video-component{
+    height: 90vh;
+    overflow: scroll;
+}
+.saved-video-component{
+    overflow: scroll; /* Enables scrolling */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
+}
 @media screen and (max-width : 576px) {
-    
+    .saved-video-component{
+        height: 92vh;
+    }
 }
 @media screen and (min-width : 576px ) {
     

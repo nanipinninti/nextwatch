@@ -14,7 +14,7 @@ const Failure = (props)=>{
                     const Source = (activeTheme==="dark") ? "https://assets.ccbp.in/frontend/react-js/nxt-watch-failure-view-dark-theme-img.png":
                             "https://assets.ccbp.in/frontend/react-js/nxt-watch-failure-view-light-theme-img.png"
                     return(
-                        <div className="d-flex flex-column justify-content-center w-100 gap-2 align-items-center p-2">
+                        <div className="d-flex flex-column failure-container justify-content-center  gap-2 align-items-center p-2">
                             <img src={Source}  className="failed-img"/>
                             <h1 style={{"font-size":"1.3em"}}>Oops! Something Went Wrong</h1>
                             <h1 style={{"font-size":"1em" ,textAlign : "center"}}>

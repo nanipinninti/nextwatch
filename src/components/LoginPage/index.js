@@ -43,19 +43,26 @@ const LoginPage = ()=>{
             setErrorMsg(`* ${data.error_msg}`)
         }
     }
+    const CheckBoxClick = ()=>{setShowpassword(prv=>(
+        (prv === 'password') ? 'text' : 'password'
+    ))}
     return(
         <AppTheme.Consumer>
 
         { value =>{
             const {activeTheme} = value
             const classNameForErrorMsg = (errorMsg==='')?'hide' : 'flex'
+            const imgSrc =(activeTheme==="light")?"https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+                                            : "https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png"
             return(
                 <div className={`col-11 Login-page-component Login-page-component-${activeTheme} d-flex flex-column align-items-center justify-content-center`} style={{"min-height":"100vh"}}>
                     <div className="row d-flex flex-column">
                         <div className={`col-12 col-lg-6  login-page-container login-page-container-${activeTheme} d-flex flex-column align-items-center justify-content-center`}>
                             {/* next watch logo */}
-                            <img src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-                                className="login-img" />
+                            <img src={imgSrc}
+                                className="login-img" 
+                                alt="login-img"
+                            />
 
                             {/* username field */}
                             <div className="d-flex flex-column w-100">
@@ -78,15 +85,11 @@ const LoginPage = ()=>{
                             </div>
 
                             {/* show password check box */}
-                            <div className="d-flex w-100 gap-2">
+                            <label className="d-flex w-100 gap-2"  >
 
-                                <input type="checkbox" onClick={
-                                    ()=>{setShowpassword(prv=>(
-                                        (prv === 'password') ? 'text' : 'password'
-                                    ))}
-                                }/>
-                                <h1 className="check-box-text m-0" style={(activeTheme==='light')?({color :"black"}) : ({color :"white"})} >Show Password</h1>
-                            </div>
+                                <input type="checkbox" name="checkbox" onClick={CheckBoxClick}/>
+                                <h1  className="check-box-text m-0" style={(activeTheme==='light')?({color :"black"}) : ({color :"white"})} >Show Password</h1>
+                            </label>
                             
                             <div className="w-100 my-2" style={{'height' : '50px'}}>
                                 <button type="submit" 
