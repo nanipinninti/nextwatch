@@ -10,18 +10,33 @@ import SavedVideos from './components/SavedVideos';
 import Trending from './components/Trending';
 import NotFound from './components/NotFound';
 import PlayingVideo from './components/PlayingVideo';
+import Cookies from "js-cookie";
 
 function App() {
-  const [activeTheme ,setActiveTheme]= useState('light')
+  const current_theme = ()=>{
+    if (Cookies.get("theme")===undefined){
+      Cookies.set("theme","light",{expires : 3})
+      return "light"
+    }
+    else{
+      return Cookies.get("theme")
+    }
+  } 
+  const [activeTheme ,setActiveTheme]= useState(current_theme())
   const [savedVideos,setSavedVideos] = useState([])
   const [likedVideos,setLikedVideos] = useState([])
   const [dislikedVideos,setDislikedVideos] = useState([])
 
-
   // functionalities
   const toggleTheme = ()=>{
-    if (activeTheme === "dark") setActiveTheme('light');
-    else setActiveTheme("dark")
+    if (activeTheme === "dark") {
+      Cookies.set("theme","light",{expires : 3})
+      setActiveTheme('light')
+    }
+    else {
+      Cookies.set("theme","dark",{expires : 3})
+      setActiveTheme("dark")
+    }
   }
   const removeFromSavedVideos = (id)=>{
     // console.log("remvoing....")
