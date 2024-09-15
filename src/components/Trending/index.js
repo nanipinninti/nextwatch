@@ -61,12 +61,15 @@ const Trending = (props)=>{
             setStatus(constNames.Failed)
         }
     }
+    const FailedRetry = ()=>{
+        setStatus(constNames.Loading)
+    }
     const currentComponent = (activeTheme)=>{
         switch(status){
             case constNames.Loading:
                 return(<Loading />)
             case constNames.Failed:
-                return(<Failure />)
+                return(<Failure FailedRetry={FailedRetry}/>)
             case constNames.Success:
                 return( success(activeTheme))
             default :

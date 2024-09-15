@@ -22,6 +22,9 @@ const Gaming = (props)=>{
     useEffect(()=>{
         fetchDetails()
     },[])
+    const FailedRetry = ()=>{
+        setStatus(constNames.Loading)
+    }
     const fetchDetails = async ()=>{
         const api = "https://apis.ccbp.in/videos/gaming"
         const options = {
@@ -79,7 +82,7 @@ const Gaming = (props)=>{
             case constNames.Loading:
                 return(<Loading />)
             case constNames.Failed:
-                return(<Failure />)
+                return(<Failure FailedRetry={FailedRetry}/>)
             case constNames.Success:
                 return( success(activeTheme))
             default :
