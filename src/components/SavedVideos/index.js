@@ -49,7 +49,7 @@ const SavedVideos = (props)=>{
                 <div className="col-12">
                     <div className="row">
                         <CommonLayout current="Saved videos" />
-                        <div className="col-12 col-lg-9 p-0 d-flex flex-column">
+                        <div className="col-12 col-lg-10 p-0 d-flex flex-column">
                             <div className = {`saved-video-component saved-video-component-${activeTheme}`} style={{background : background}}>                        
                             {
                                     currentComponent(activeTheme ,savedVideos)

@@ -98,7 +98,7 @@ const Gaming = (props)=>{
                 <div className="col-12">
                     <div className="row">
                         <CommonLayout current = "Gaming" />
-                        <div className="col-12 col-lg-9 p-0 d-flex flex-column">
+                        <div className="col-12 col-lg-10 p-0 d-flex flex-column">
                             <div className = {`gaming-component gaming-component-${activeTheme}`} style={{background : background}}>                        
                                 {
                                     currentComponent(activeTheme)

@@ -41,8 +41,9 @@ function App() {
   const removeFromSavedVideos = (id)=>{
     // console.log("remvoing....")
     setSavedVideos(prv=>(
-      prv.filter(vidId=>(vidId!==id))
+      prv.filter(vidId=>(vidId.id!==id))
   ))
+  console.log(savedVideos,id)
   }
 
   //  for like
@@ -83,7 +84,7 @@ function App() {
     }}>
           <div className={`body-${activeTheme} body`}>
             <HashRouter>
-              <div className='container'>
+              <div className='container-fluid px-xs-0 px-lg-4'>
                 <div className='row d-flex flex-column align-items-center'>
                   <Routes>
                       <Route path='/login' element = {<LoginPage />} />

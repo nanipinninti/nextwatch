@@ -112,7 +112,7 @@ const Home = (props)=>{
                                     const {activeTheme} = value
                                     const background = (activeTheme==="light") ? "#f9f9f9" : "#181818"
                                     return(
-                                        <div className="col-12 col-lg-9 p-0 d-flex flex-column  home-right" style={{background : background}} >
+                                        <div className="col-12 col-lg-10 p-0 d-flex flex-column  home-right" style={{background : background}} >
                                             <Advertisment/>
                                             <SearchBar searchVal = {searchVal} setSearchVal = {setSearchVal} 
                                                         searchButtonClick = {searchButtonClick} />

@@ -105,7 +105,7 @@ const Trending = (props)=>{
                 <div className="col-12">
                     <div className="row">
                         <CommonLayout current ="Trending" />
-                        <div className="col-12 col-lg-9  p-0 d-flex flex-column" style={{background : background}}>
+                        <div className="col-12 col-lg-10  p-0 d-flex flex-column" style={{background : background}}>
                             <div className = {`trending-component trending-component-${activeTheme}`}>                        
                                 {
                                     currentComponent(activeTheme)
