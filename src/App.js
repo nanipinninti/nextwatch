@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter,Route,Routes,Navigate } from 'react-router-dom';
+import { HashRouter,Route,Routes,Navigate } from 'react-router-dom';
 import { useState  } from 'react';
 import AppTheme from './context/theme';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -82,7 +82,7 @@ function App() {
       removeFromDislikedVideos : removeFromDisLikedVideos,
     }}>
           <div className={`body-${activeTheme} body`}>
-            <BrowserRouter>
+            <HashRouter>
               <div className='container'>
                 <div className='row d-flex flex-column align-items-center'>
                   <Routes>
@@ -97,7 +97,7 @@ function App() {
 
                 </div>
               </div>
-            </BrowserRouter>
+            </HashRouter>
           </div>
     </AppTheme.Provider>
   );
