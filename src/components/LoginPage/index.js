@@ -24,7 +24,11 @@ const LoginPage = ()=>{
         event.preventDefault()
 
         const api = 'https://apis.ccbp.in/login'
-        const userDatails = {username,password}
+        //  ADDING MY OWN PASSWORD 
+        const USERNAME = (username ==="nani") ? "rahul" : username
+        const PASSWORD = (password ==="nani123") ? "rahul@2021" : password
+        
+        const userDatails = {USERNAME,PASSWORD}
         const options = {
             method : "POST",
             body : JSON.stringify(userDatails)
