@@ -27,8 +27,8 @@ const LoginPage = ()=>{
         //  ADDING MY OWN PASSWORD 
         const USERNAME = (username ==="nani") ? "rahul" : username
         const PASSWORD = (password ==="nani123") ? "rahul@2021" : password
-        
-        const userDatails = {USERNAME,PASSWORD}
+
+        const userDatails = {username : USERNAME,password : PASSWORD}
         const options = {
             method : "POST",
             body : JSON.stringify(userDatails)
