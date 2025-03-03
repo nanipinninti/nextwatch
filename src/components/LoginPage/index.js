@@ -9,8 +9,8 @@ import './index.css'
 
 const LoginPage = ()=>{
 
-    const [username,setUsername] = useState('')
-    const [password,setPassword] = useState('')
+    const [username,setUsername] = useState('nani')
+    const [password,setPassword] = useState('nani123')
     const [showpassword,setShowpassword] = useState('password')
     const [errorMsg,setErrorMsg] = useState('')
     
